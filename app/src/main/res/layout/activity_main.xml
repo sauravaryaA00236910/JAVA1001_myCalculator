@@ -181,7 +181,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTV"
+        app:layout_constraintTop_toBottomOf="@+id/displayEditTV"
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
@@ -233,7 +233,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnDivide" />
 
     <EditText
-        android:id="@+id/resultTV"
+        android:id="@+id/displayEditTV"
         android:layout_width="414dp"
         android:layout_height="47dp"
         android:ems="10"
