@@ -20,6 +20,7 @@ import javax.xml.xpath.XPathExpressionException;
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener{
 
+//    initializing variables
     private float resultTV;
     private float firstValue;
     private float secondValue;
@@ -48,11 +49,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        assigning default values
         resultTV = 0;
         firstValue = 0;
         secondValue = 0;
         equationTV = "";
 
+//        accessing layout buttons through their IDs and setting onClick listeners
         btnNum0 = findViewById(R.id.btnNum0);
         btnNum0.setOnClickListener(this);
 
@@ -105,11 +108,14 @@ public class MainActivity extends AppCompatActivity
         btnClear.setOnClickListener(this);
 
         displayEditTv = findViewById(R.id.displayEditTV);
+//        setting display text for the calculator
         displayEditTv.setText(equationTV);
 
     }
     public void onClick(View view){
+//        adding functionality to layout buttons when clicked using switch statement
         switch (view.getId()){
+//                adding clicked button value to set display text for calculator as a string
             case R.id.btnNum0:
                 equationTV += btnNum0.getText().toString();
                 displayEditTv.setText(equationTV);
@@ -171,32 +177,50 @@ public class MainActivity extends AppCompatActivity
                 displayEditTv.setText(equationTV);
                 break;
             case R.id.btnEqual:
+//                adding functionality to perform operations on the entered equation and setting display result text
+//                try and catch error to get the exception if occurred
                 try{
+//                    looping through the entered string by the user
                     for(int i = 0; i<equationTV.length(); i++){
+//                        switch statement to check the type of operator present in the equation
                         switch (equationTV.charAt(i)){
                             case '+':
+//                                setting first value of the equation by extracting the substring before the operator and converting it to a float value
                                 firstValue = Float.parseFloat(equationTV.substring(0, i));
+//                                setting second value of the equation by extracting the substring after the operator and converting it to a float value
                                 secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
+//                                performing the required math operation on the first and second value
                                 resultTV = firstValue + secondValue;
                                 break;
                             case '-':
+//                                setting first value of the equation by extracting the substring before the operator and converting it to a float value
                                 firstValue = Float.parseFloat(equationTV.substring(0, i));
+//                                setting second value of the equation by extracting the substring after the operator and converting it to a float value
                                 secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
+//                                performing the required math operation on the first and second value
                                 resultTV = firstValue - secondValue;
                                 break;
                             case '*':
+//                                setting first value of the equation by extracting the substring before the operator and converting it to a float value
                                 firstValue = Float.parseFloat(equationTV.substring(0, i));
+//                                setting second value of the equation by extracting the substring after the operator and converting it to a float value
                                 secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
+//                                performing the required math operation on the first and second value
                                 resultTV = firstValue * secondValue;
                                 break;
                             case '/':
+//                                setting first value of the equation by extracting the substring before the operator and converting it to a float value
                                 firstValue = Float.parseFloat(equationTV.substring(0, i));
+//                                setting second value of the equation by extracting the substring after the operator and converting it to a float value
                                 secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
+//                                performing the required math operation on the first and second value
                                 resultTV = firstValue / secondValue;
                                 break;
                         }
                     }
+//                    setting result text by converting the float result to a string
                     displayEditTv.setText(Float.toString(resultTV));
+//                    setting the result as the first value to enable user to continue performing math operations further
                     equationTV = Float.toString(resultTV);
                 }
                 catch(Exception e){
@@ -205,10 +229,12 @@ public class MainActivity extends AppCompatActivity
                 }
                 break;
             case R.id.btnClear:
+//                adding functionality to the clear button  by setting the equation string as empty and also display text as empty string
                 equationTV = "";
                 displayEditTv.setText("");
                 break;
             default:
+//                default toast view if user clicks anywhere else
                 Toast.makeText(this, "View not implemented", Toast.LENGTH_SHORT).show();
                 break;
         }
