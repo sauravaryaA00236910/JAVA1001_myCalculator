@@ -20,10 +20,9 @@ import javax.xml.xpath.XPathExpressionException;
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener{
 
-    private int resultTV;
-    private int firstValue;
-    private int secondValue;
-    private boolean equalPressed;
+    private float resultTV;
+    private float firstValue;
+    private float secondValue;
     private String equationTV;
     private Button btnNum0;
     private Button btnNum1;
@@ -52,7 +51,6 @@ public class MainActivity extends AppCompatActivity
         resultTV = 0;
         firstValue = 0;
         secondValue = 0;
-        equalPressed = false;
         equationTV = "";
 
         btnNum0 = findViewById(R.id.btnNum0);
@@ -177,28 +175,29 @@ public class MainActivity extends AppCompatActivity
                     for(int i = 0; i<equationTV.length(); i++){
                         switch (equationTV.charAt(i)){
                             case '+':
-                                firstValue = Integer.parseInt(equationTV.substring(0, i));
-                                secondValue = Integer.parseInt(equationTV.substring(i+1, equationTV.length()));
+                                firstValue = Float.parseFloat(equationTV.substring(0, i));
+                                secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
                                 resultTV = firstValue + secondValue;
                                 break;
                             case '-':
-                                firstValue = Integer.parseInt(equationTV.substring(0, i));
-                                secondValue = Integer.parseInt(equationTV.substring(i+1, equationTV.length()));
+                                firstValue = Float.parseFloat(equationTV.substring(0, i));
+                                secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
                                 resultTV = firstValue - secondValue;
                                 break;
                             case '*':
-                                firstValue = Integer.parseInt(equationTV.substring(0, i));
-                                secondValue = Integer.parseInt(equationTV.substring(i+1, equationTV.length()));
+                                firstValue = Float.parseFloat(equationTV.substring(0, i));
+                                secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
                                 resultTV = firstValue * secondValue;
                                 break;
                             case '/':
-                                firstValue = Integer.parseInt(equationTV.substring(0, i));
-                                secondValue = Integer.parseInt(equationTV.substring(i+1, equationTV.length()));
+                                firstValue = Float.parseFloat(equationTV.substring(0, i));
+                                secondValue = Float.parseFloat(equationTV.substring(i+1, equationTV.length()));
                                 resultTV = firstValue / secondValue;
                                 break;
                         }
                     }
-                    displayEditTv.setText(Integer.toString(resultTV));
+                    displayEditTv.setText(Float.toString(resultTV));
+                    equationTV = Float.toString(resultTV);
                 }
                 catch(Exception e){
                     Log.e("Error", e.getMessage());
