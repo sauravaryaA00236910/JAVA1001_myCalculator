@@ -7,7 +7,7 @@
     android:textAlignment="center"
     tools:context=".MainActivity">
 
-<!--    Number 9 button view-->
+    <!--    Number 9 button view-->
     <Button
         android:id="@+id/btnNum9"
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnAdd"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Number 8 button view-->
+    <!--    Number 8 button view-->
     <Button
         android:id="@+id/btnNum8"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnNum9"
         app:layout_constraintTop_toTopOf="@+id/btnNum9" />
 
-<!--    Number 7 button view-->
+    <!--    Number 7 button view-->
     <Button
         android:id="@+id/btnNum7"
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnEqual"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Number 6 button view-->
+    <!--    Number 6 button view-->
     <Button
         android:id="@+id/btnNum6"
         android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNum9"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Number 5 button view-->
+    <!--    Number 5 button view-->
     <Button
         android:id="@+id/btnNum5"
         android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnNum6" />
 
 
-<!--Number 4 button view-->
+    <!--Number 4 button view-->
     <Button
         android:id="@+id/btnNum4"
         android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNum7"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Number 3 button view-->
+    <!--    Number 3 button view-->
     <Button
         android:id="@+id/btnNum3"
         android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNum6"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Number 2 button view-->
+    <!--    Number 2 button view-->
     <Button
         android:id="@+id/btnNum2"
         android:layout_width="wrap_content"
@@ -123,7 +123,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnNum3"
         app:layout_constraintTop_toTopOf="@+id/btnNum3" />
 
-<!--    Number 1 button view-->
+    <!--    Number 1 button view-->
     <Button
         android:id="@+id/btnNum1"
         android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNum4"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Number 0 button view-->
+    <!--    Number 0 button view-->
     <Button
         android:id="@+id/btnNum0"
         android:layout_width="wrap_content"
@@ -152,7 +152,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnDecimal"
         app:layout_constraintTop_toTopOf="@+id/btnDecimal" />
 
-<!--    Decimal button view -->
+    <!--    Decimal button view -->
     <Button
         android:id="@+id/btnDecimal"
         android:layout_width="wrap_content"
@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNum3"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Clear button view-->
+    <!--    Clear button view-->
     <Button
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
@@ -183,7 +183,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNum1"
         app:layout_constraintVertical_bias="0.0" />
 
-<!--    Add operator button view-->
+    <!--    Add operator button view-->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="68dp"
@@ -198,7 +198,7 @@
         app:layout_constraintTop_toBottomOf="@+id/displayEditTV"
         app:layout_constraintVertical_bias="0.023" />
 
-<!--    Subtract operator button view-->
+    <!--    Subtract operator button view-->
     <Button
         android:id="@+id/btnSubtract"
         android:layout_width="68dp"
@@ -211,7 +211,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnAdd"
         app:layout_constraintTop_toTopOf="@+id/btnAdd" />
 
-<!--    Multiply operator button view-->
+    <!--    Multiply operator button view-->
     <Button
         android:id="@+id/btnMultiply"
         android:layout_width="68dp"
@@ -224,7 +224,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnSubtract"
         app:layout_constraintTop_toTopOf="@+id/btnSubtract" />
 
-<!--    Divide operator button view-->
+    <!--    Divide operator button view-->
     <Button
         android:id="@+id/btnDivide"
         android:layout_width="68dp"
@@ -237,7 +237,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnMultiply"
         app:layout_constraintTop_toTopOf="@+id/btnMultiply" />
 
-<!--    Equal button view to get the equation result-->
+    <!--    Equal button view to get the equation result-->
     <Button
         android:id="@+id/btnEqual"
         android:layout_width="68dp"
@@ -250,12 +250,14 @@
         app:layout_constraintStart_toEndOf="@+id/btnDivide"
         app:layout_constraintTop_toTopOf="@+id/btnDivide" />
 
-<!--    Edit text view to display equation and the result-->
+    <!--    Edit text view to display equation and the result-->
     <EditText
         android:id="@+id/displayEditTV"
-        android:layout_width="414dp"
+        android:layout_width="390dp"
         android:layout_height="47dp"
+        android:layout_marginEnd="6dp"
         android:ems="10"
+        android:focusableInTouchMode="false"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -264,7 +266,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleText"
         app:layout_constraintVertical_bias="0.284" />
 
-<!--    App title text-->
+    <!--    App title text-->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -272,7 +274,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/mycalculator_app"
         android:textSize="34sp"
-        android:textStyle="normal"
+        android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
